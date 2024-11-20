@@ -1,40 +1,89 @@
 # Tensor Decomposition in MATLAB
 
 ## Project Description
-
-This repository contains MATLAB implementations for tensor decomposition algorithms: CP-ALS, HOSVD, and HOOI. These algorithms are crucial for applications such as signal processing, computer vision, and data mining where multidimensional data needs to be analyzed and simplified.
+This repository houses MATLAB implementations of tensor decomposition algorithms: CP-ALS, HOSVD, and HOOI. These algorithms are crucial for handling multidimensional data in fields like signal processing, computer vision, and data mining, where simplification and analysis of complex datasets are required.
 
 ## Algorithms Implemented
 
-- **CP-ALS**: Canonical Polyadic Decomposition using Alternating Least Squares (ALS) focuses on breaking a tensor down into a sum of rank-one tensors.
-- **HOSVD**: Higher-Order Singular Value Decomposition provides a robust method for decomposing a tensor into orthogonal matrices and a core tensor, which simplifies the tensor structure significantly.
-- **HOOI**: Higher-Order Orthogonal Iteration is an iterative refinement of HOSVD that enhances the approximation accuracy by iteratively optimizing the core tensor and the component matrices.
+- **CP-ALS**: Canonical Polyadic Decomposition using Alternating Least Squares (ALS) focuses on breaking down a tensor into a sum of rank-one tensors.
+- **HOSVD**: Higher-Order Singular Value Decomposition provides a robust method for decomposing a tensor into orthogonal matrices and a core tensor, simplifying the tensor structure.
+- **HOOI**: Higher-Order Orthogonal Iteration iteratively refines HOSVD to enhance approximation accuracy by optimizing the core tensor and component matrices.
 
-## Usage
+## Usage Instructions
 
-Each algorithm is implemented in its own MATLAB file with supporting functions to perform necessary operations such as the Khatri-Rao product, tensor unfolding and folding, and normalization. To use these scripts, follow these steps:
+Follow these steps to utilize the tensor decomposition scripts:
 
-1. **Clone this repository**
+1. **Clone the repository**.
+2. **Navigate to the repository directory** in MATLAB.
+3. **Execute the test scripts** to observe tensor decompositions:
+   - `test_CP_ALS.m` for CP-ALS
+   - `test_HOSVD.m` for HOSVD
+   - `test_HOOI.m` for HOOI
+4. **Adapt the test scripts** 
 
-2. **Navigate to the repository directory** and open MATLAB in this directory.
+## Visualizing Results
+This repository includes images demonstrating the effects of tensor decomposition techniques on the image compression of the University of Limoges logo. Below are the comparisons for each algorithm.
 
-3. **Run the test scripts** to see examples of tensor decompositions:
-- `test_CP_ALS.m` for CP-ALS
-- `test_HOSVD.m` for HOSVD
-- `test_HOOI.m` for HOOI
 
-4. **Modify the test scripts** to apply the algorithms to your own data.
+![Original](Tensor_decomposition\Images\logo.jpg)
 
+
+### Image Compression Results Using Tensor Decomposition Techniques
+#### CP-ALS Image Reduction
+- **Original Image**: Memory = 937.50 KB
+- **Compressed Images**:
+  - Rank 100, Rank 100, Rank 3: Memory = 546.95 KB, Loss = 0.0710%
+  - Rank 50, Rank 50, Rank 3: Memory = 214.91 KB, Loss = 0.5546%
+  - Rank 10, Rank 10, Rank 3: Memory = 33.36 KB, Loss = 5.4847%
+
+![CP-ALS Results](Tensor_decomposition\Images\logo-CPALS.jpg)
+
+#### HOOI Image Reduction
+- **Original Image**: Memory = 937.50 KB
+- **Compressed Images**:
+  - Rank 100, Rank 100, Rank 3: Memory = 546.95 KB, Loss = 0.0710%
+  - Rank 50, Rank 50, Rank 3: Memory = 214.91 KB, Loss = 0.5546%
+  - Rank 10, Rank 10, Rank 3: Memory = 33.36 KB, Loss = 5.4847%
+
+![HOOI Results](Tensor_decomposition\Images\logo-HOOI.jpg)
+
+#### HOSVD Image Reduction
+- **Original Image**: Memory = 937.50 KB
+- **Compressed Images**:
+  - Rank 100, Rank 100, Rank 3: Memory = 546.95 KB, Loss = 0.0710%
+  - Rank 50, Rank 50, Rank 3: Memory = 214.91 KB, Loss = 0.5546%
+  - Rank 10, Rank 10, Rank 3: Memory = 33.36 KB, Loss = 5.4847%
+
+![HOSVD Results](Tensor_decomposition\Images\logo-HOSVD.jpg)
+## Compare Algorithms
+
+### CP-ALS Image Reduction
+<p align="center">
+  <img src="Tensor_decomposition/Images/image_reduction_cpals.jpg" width="50%" title="CP-ALS Image Reduction">
+  <br>
+  <em>Memory usage by rank for CP-ALS.</em>
+</p>
+
+### HOSVD Image Reduction
+<p align="center">
+  <img src="Tensor_decomposition/Images/image_reduction_HOSVD.jpg" width="50%" title="HOSVD Image Reduction">
+  <br>
+  <em>Memory usage by rank for HOSVD.</em>
+</p>
+
+### HOOI Image Reduction
+<p align="center">
+  <img src="Tensor_decomposition/Images/image_reduction_HOOI.jpg" width="50%" title="HOOI Image Reduction">
+  <br>
+  <em>Memory usage by rank for HOOI.</em>
+</p>
 ## File Descriptions
 
-- `CP_ALS.m`: Implementation of the CP-ALS algorithm.
-- `HOSVD.m`: Implementation of the HOSVD algorithm.
-- `HOOI.m`: Implementation of the HOOI algorithm.
-- `khatrirao_prod.m`: Function to compute the Khatri-Rao product.
-- `ndim_fold.m` & `ndim_unfold.m`: Functions to fold and unfold tensors.
-- `normalize_columns.m`: Normalizes columns of a matrix.
-- `reconstruct_tensor.m`: Reconstructs a tensor from its decomposed matrices.
-- `tprod.m`: Computes the tensor product for given matrices.
-- `Introduction-to-Tensors.pdf`: A document providing a background on tensor theory.
-- `Kolda-BaderTensor_decomposition.pdf`: Detailed explanation of tensor decomposition methods.
+- `*.m`: Implementation scripts for each tensor decomposition algorithm and supporting functions.
+- `Introduction-to-Tensors.pdf`: Provides foundational knowledge on tensor theory.
+- `Kolda-BaderTensor_decomposition.pdf`: Detailed explanation on tensor decomposition methods.
 
+## References
+- Detailed academic references are provided to support the implementations and usage of tensor decomposition algorithms in advanced applications.
+
+For additional details and examples of implementation, refer to the MATLAB scripts and documentation included in this repository.
