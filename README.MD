@@ -25,7 +25,7 @@ Follow these steps to utilize the tensor decomposition scripts:
 This repository includes images demonstrating the effects of tensor decomposition techniques on the image compression of the University of Limoges logo. Below are the comparisons for each algorithm.
 
 
-![Original](Tensor_decomposition\Images\logo.jpg)
+![Original](Tensor_decomposition/Images/logo.jpg)
 
 
 ### Image Compression Results Using Tensor Decomposition Techniques
@@ -36,7 +36,7 @@ This repository includes images demonstrating the effects of tensor decompositio
   - Rank 50, Rank 50, Rank 3: Memory = 214.91 KB, Loss = 0.5546%
   - Rank 10, Rank 10, Rank 3: Memory = 33.36 KB, Loss = 5.4847%
 
-![CP-ALS Results](Tensor_decomposition\Images\logo-CPALS.jpg)
+![CP-ALS Results](Tensor_decomposition/Images/logo-CPALS.jpg)
 
 #### HOOI Image Reduction
 - **Original Image**: Memory = 937.50 KB
@@ -45,7 +45,7 @@ This repository includes images demonstrating the effects of tensor decompositio
   - Rank 50, Rank 50, Rank 3: Memory = 214.91 KB, Loss = 0.5546%
   - Rank 10, Rank 10, Rank 3: Memory = 33.36 KB, Loss = 5.4847%
 
-![HOOI Results](Tensor_decomposition\Images\logo-HOOI.jpg)
+![HOOI Results](Tensor_decomposition/Images/logo-HOOI.jpg)
 
 #### HOSVD Image Reduction
 - **Original Image**: Memory = 937.50 KB
@@ -54,7 +54,7 @@ This repository includes images demonstrating the effects of tensor decompositio
   - Rank 50, Rank 50, Rank 3: Memory = 214.91 KB, Loss = 0.5546%
   - Rank 10, Rank 10, Rank 3: Memory = 33.36 KB, Loss = 5.4847%
 
-![HOSVD Results](Tensor_decomposition\Images\logo-HOSVD.jpg)
+![HOSVD Results](Tensor_decomposition/Images/logo-HOSVD.jpg)
 ## Compare Algorithms
 
 ### CP-ALS Image Reduction
