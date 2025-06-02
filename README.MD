@@ -83,7 +83,4 @@ This repository includes images demonstrating the effects of tensor decompositio
 - `Introduction-to-Tensors.pdf`: Provides foundational knowledge on tensor theory.
 - `Kolda-BaderTensor_decomposition.pdf`: Detailed explanation on tensor decomposition methods.
 
-## References
-- Detailed academic references are provided to support the implementations and usage of tensor decomposition algorithms in advanced applications.
 
-For additional details and examples of implementation, refer to the MATLAB scripts and documentation included in this repository.
